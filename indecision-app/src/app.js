@@ -1,28 +1,29 @@
+import React, { ReactDOM } from 'react'
 const object = {
-    title: "To Kill a Mockingbird",
-    subtitle: "Drama in the Recent South",
-    options: ['One', 'Two']
+  title: 'To Kill a Mockingbird',
+  subtitle: 'Drama in the Recent South',
+  options: ['One', 'Two']
 }
 
-const user = {
-    name: 'Mickey Mouse',
-    age: 92,
-    location: "Orlando, Florida"
-}
+// const user = {
+//   name: 'Mickey Mouse',
+//   age: 92,
+//   location: 'Orlando, Florida'
+// }
 
-const getLocation = location => {
-    return location && <p>Location: {location}</p>
-}
+// const getLocation = location => {
+//   return location && <p>Location: {location}</p>
+// }
 
 const getOptions = options => {
-    return (
-        <div>
-            <p>Here are your options</p>
-            <ol>
-            {options.map(option => <li>option</li>)}
-            </ol>
-        </div>
-    )
+  return (
+    <div>
+        <p>Here are your options</p>
+        <ol>
+        {options.map(option => <li key=''>option</li>)}
+        </ol>
+    </div>
+  )
 }
 
 const template = (
@@ -33,13 +34,13 @@ const template = (
     </div>
 )
 
-const templateTwo = (
-    <div>
-        <h1>{user.name ? user.name : 'Anonymous'}</h1>
-        {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
-        {getLocation(user.location)}
-    </div>
-)
+// const templateTwo = (
+//     <div>
+//         <h1>{user.name ? user.name : 'Anonymous'}</h1>
+//         {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
+//         {getLocation(user.location)}
+//     </div>
+// )
 
-const appRoot = document.getElementById('app');
-ReactDOM.render(template, appRoot);
+const appRoot = document.getElementById('app')
+ReactDOM.render(template, appRoot)
